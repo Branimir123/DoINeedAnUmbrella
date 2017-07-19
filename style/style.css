@@ -1,0 +1,120 @@
+html {
+    height: 100%;
+}
+
+body{
+    height: 100%;/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#d0e4f7+0,73b1e7+0,0a77d5+0,539fe1+75,87bcea+100 */
+background: rgb(208,228,247); /* Old browsers */
+background: -moz-linear-gradient(-45deg, rgba(208,228,247,1) 0%, rgba(115,177,231,1) 0%, rgba(10,119,213,1) 0%, rgba(83,159,225,1) 75%, rgba(135,188,234,1) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(-45deg, rgba(208,228,247,1) 0%,rgba(115,177,231,1) 0%,rgba(10,119,213,1) 0%,rgba(83,159,225,1) 75%,rgba(135,188,234,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(135deg, rgba(208,228,247,1) 0%,rgba(115,177,231,1) 0%,rgba(10,119,213,1) 0%,rgba(83,159,225,1) 75%,rgba(135,188,234,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d0e4f7', endColorstr='#87bcea',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+.container{
+    text-align: center;
+}
+
+.app-component{ 
+    padding-top: 100px;
+}
+
+.weather-icon{
+    width: 7%;
+    size:auto;
+}
+
+.big-heading, 
+.answer-yes, 
+.answer-no { 
+    font-family: 'Rouge Script', cursive;
+    font-size: 5em;
+    font-weight: normal;
+    line-height: 48px;
+    margin: 0 0 50px; 
+    text-align: center; 
+    text-shadow: 1px 1px 2px rgba(66,66,66,0.7); 
+}
+
+.big-heading{
+    color: rgba(255,255,255,0.9);
+}
+
+.answer-yes {
+    color: green;
+}
+
+.answer-no {
+    color: green;
+}
+
+.weather-description,
+.weather-location{
+    color: rgba(255,255,255,0.8);
+    font-family: 'Rouge Script', cursive;
+    font-weight: normal;
+    line-height: 48px;
+    margin: 0 0 0px; 
+    text-align: center; 
+    text-shadow: 10px 10px 16px rgba(0,66,255,0.8); 
+}
+
+@media screen and (max-width: 767px) {
+    .big-heading, 
+    .answer-yes, 
+    .answer-no  {
+        font-size: 3em;
+    }
+    .weather-description,
+    .weather-location{
+        font-size: 1em;
+    }
+}
+
+/* sm */
+@media screen and (min-width: 768px) {
+   .big-heading, 
+    .answer-yes, 
+    .answer-no {
+        font-size: 3em;
+    } 
+    .weather-description,
+    .weather-location{
+        font-size: 1em;
+    }
+}
+
+/* md */
+@media screen and (min-width: 992px) {
+    .big-heading, 
+    .answer-yes, 
+    .answer-no  {
+        font-size: 5em;
+    }
+    .weather-description,
+    .weather-location{
+        font-size: 2em;
+    }
+}
+
+/* lg */
+@media screen and (min-width: 1200px) {
+    .big-heading, 
+    .answer-yes, 
+    .answer-no y {
+        font-size: 6em;
+    }
+    .weather-description,
+    .weather-location{
+        font-size: 2em;
+    }
+}
+
+.answer-yes,
+.answer-no {
+    margin: 100px;
+}
+
+.message-loading{
+    color: rgba(255,255,255,1);
+}
