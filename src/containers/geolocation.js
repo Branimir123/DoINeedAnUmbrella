@@ -23,7 +23,7 @@ class Geolocation extends Component {
             : !this.props.isGeolocationEnabled
                 ? <div className="text text-danger"> Please enable your location, so we can find where you are. </div>
                 : !this.props.coords
-                    ? <div className="message-loading"> Fetching your location... </div>
+                    ? <div className="message-loading">Fetching your location... </div>
                     : <div></div>
         );
     }
