@@ -10,7 +10,6 @@
     "test:watch": "npm run test -- --watch",
     "postinstall": "webpack -p",
     "start": "node server.js"
-
   },
   "author": "",
   "license": "ISC",
@@ -38,6 +37,7 @@
     "react-redux": "4.3.0",
     "react-router": "^2.0.1",
     "redux": "^3.0.4",
-    "redux-thunk": "^2.2.0"
+    "redux-thunk": "^2.2.0",
+    "webpack": "^1.15.0"
   }
 }
