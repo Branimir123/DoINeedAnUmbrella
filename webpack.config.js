@@ -27,8 +27,9 @@ module.exports = {
   },
   plugins: [
       new webpack.DefinePlugin({
-          "process.env": {
-            API_KEY: process.env.API_KEY
+          'process.env': {
+            'NODE_ENV': JSON.stringify('production'),
+            'API_KEY': process.env.API_KEY
           }
       })
   ]
