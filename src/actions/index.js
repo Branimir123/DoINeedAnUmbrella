@@ -27,4 +27,4 @@ export function authError(error) {
         type: FETCH_WEATHER_ERROR,
         payload: error
     }
-}h
+}
