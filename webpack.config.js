@@ -26,11 +26,9 @@ module.exports = {
     contentBase: './'
   },
   plugins: [
-      new webpack.DefinePlugin({
-          'process.env': {
-            'NODE_ENV': JSON.stringify('production'),
-            'API_KEY': process.env.API_KEY
-          }
-      })
+      new webpack.EnvironmentPlugin([
+          "NODE_ENV",
+          "API_KEY"
+      ])
   ]
 };
