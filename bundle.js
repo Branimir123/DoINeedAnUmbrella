@@ -21921,7 +21921,7 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	var API_KEY = process.engitv.API_KEY;
+	var API_KEY = process.env.API_KEY;
 	var ROOT_URL = 'https://api.apixu.com/v1/current.json?key=' + API_KEY;
 
 	function fetchWeather(coordinates) {
