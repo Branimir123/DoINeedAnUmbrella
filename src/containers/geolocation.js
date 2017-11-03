@@ -17,15 +17,18 @@ class Geolocation extends Component {
             this.props.fetchWeather(this.props.coords);
         }
 
-        return (
-            !this.props.isGeolocationAvailable
-            ? <div className="text text-danger">Your browser does not support geolocation </div>
-            : !this.props.isGeolocationEnabled
-                ? <div className="text text-danger"> Please enable your location, so we can find where you are. </div>
-                : !this.props.coords
-                    ? <div className="message-loading">Fetching your location... </div>
-                    : <div></div>
-        );
+        if(!this.props.isGeolocationAvailable) {
+            return <div className="text text-danger"> Your browser does not support geolocation. </div>
+        }
+        else if(!this.props.isGeolocationEnabled){
+            return <div className="text text-danger"> Your geolocation isn't enabled. Please enable it. </div>
+        }
+        else if(!this.props.coords){
+            return <div className="message-loading">Fetching your location... </div>
+        }
+        else {
+            return <div></div>
+        }
     }
 }
 
