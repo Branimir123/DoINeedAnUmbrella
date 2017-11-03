@@ -21921,7 +21921,7 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	var API_KEY = process.env.WEATHER_API_KEY;
+	var API_KEY = process.env.API_KEY;
 	var ROOT_URL = 'https://api.apixu.com/v1/current.json?key=' + API_KEY;
 
 	function fetchWeather(coordinates) {
@@ -21945,7 +21945,7 @@
 	        type: _types.FETCH_WEATHER_ERROR,
 	        payload: error
 	    };
-	}
+	}h;
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(5)))
 
 /***/ }),
