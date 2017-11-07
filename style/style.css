@@ -2,13 +2,13 @@ html {
     height: 100%;
 }
 
-body{
-    height: 100%;/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#d0e4f7+0,73b1e7+0,0a77d5+0,539fe1+75,87bcea+100 */
-background: rgb(208,228,247); /* Old browsers */
-background: -moz-linear-gradient(-45deg, rgba(208,228,247,1) 0%, rgba(115,177,231,1) 0%, rgba(10,119,213,1) 0%, rgba(83,159,225,1) 75%, rgba(135,188,234,1) 100%); /* FF3.6-15 */
-background: -webkit-linear-gradient(-45deg, rgba(208,228,247,1) 0%,rgba(115,177,231,1) 0%,rgba(10,119,213,1) 0%,rgba(83,159,225,1) 75%,rgba(135,188,234,1) 100%); /* Chrome10-25,Safari5.1-6 */
-background: linear-gradient(135deg, rgba(208,228,247,1) 0%,rgba(115,177,231,1) 0%,rgba(10,119,213,1) 0%,rgba(83,159,225,1) 75%,rgba(135,188,234,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d0e4f7', endColorstr='#87bcea',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+body {
+    background: green;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#2379af+0,7db9e8+100&1+0,0+100 */
+    background: -moz-linear-gradient(top,  #63BB82 100%,  #54f280 80%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  #63BB82 100%, #54f280 80%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  #63BB82 100%,  #54f280 80%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=' #54f280', endColorstr=' #54f280',GradientType=0 ); /* IE6-9 */
 }
 
 .container{
@@ -26,37 +26,45 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d0e4f7', end
 
 .big-heading, 
 .answer-yes, 
-.answer-no { 
-    font-family: 'Rouge Script', cursive;
-    font-size: 5em;
+.answer-no {
+    font-family: 'Alegreya';
+    font-size: 2em;
     font-weight: normal;
     line-height: 48px;
-    margin: 0 0 50px; 
-    text-align: center; 
-    text-shadow: 1px 1px 2px rgba(66,66,66,0.7); 
+    margin: 0 0 50px;
+    text-align: center;
 }
 
 .big-heading{
     color: rgba(255,255,255,0.9);
+    transition: all .5s ease-in-out;
+}
+
+.small-heading {
+    font-family: 'Alegreya';
+    color: rgba(255,255,255,0.9);
+    transition: all .5s ease-in-out;
+    transform: scale(0.9);
 }
 
 .answer-yes {
-    color: green;
+    color: rgba(255,255,255, 0.9);
+    transition: all .5s ease-in-out;
 }
 
 .answer-no {
-    color: green;
+    color: rgba(255,255,255, 0.9);
+    transition: all .5s ease-in-out;
 }
 
 .weather-description,
 .weather-location{
     color: rgba(255,255,255,0.8);
-    font-family: 'Rouge Script', cursive;
+    font-family: 'Alegreya';
     font-weight: normal;
     line-height: 48px;
     margin: 0 0 0px; 
-    text-align: center; 
-    text-shadow: 10px 10px 16px rgba(0,66,255,0.8); 
+    text-align: center;
 }
 
 @media screen and (max-width: 767px) {
@@ -117,4 +125,74 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d0e4f7', end
 
 .message-loading{
     color: rgba(255,255,255,1);
+}
+
+.umbrella {
+    -ms-transform: rotate(15deg); /* IE 9 */
+    -webkit-transform: rotate(15deg); /* Chrome, Safari, Opera */
+    transform: rotate(15deg);
+    margin-left: 10px;
+}
+
+.loader,
+.loader:before,
+.loader:after {
+    border-radius: 50%;
+    width: 2.5em;
+    height: 2.5em;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation: load7 1.8s infinite ease-in-out;
+    animation: load7 1.8s infinite ease-in-out;
+}
+.loader {
+    color: #ffffff;
+    font-size: 10px;
+    margin: 80px auto;
+    position: relative;
+    text-indent: -9999em;
+    -webkit-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-animation-delay: -0.16s;
+    animation-delay: -0.16s;
+}
+.loader:before,
+.loader:after {
+    content: '';
+    position: absolute;
+    top: 0;
+}
+.loader:before {
+    left: -3.5em;
+    -webkit-animation-delay: -0.32s;
+    animation-delay: -0.32s;
+}
+.loader:after {
+    left: 3.5em;
+}
+@-webkit-keyframes load7 {
+    0%,
+    80%,
+    100% {
+        box-shadow: 0 2.5em 0 -1.3em;
+    }
+    40% {
+        box-shadow: 0 2.5em 0 0;
+    }
+}
+@keyframes load7 {
+    0%,
+    80%,
+    100% {
+        box-shadow: 0 2.5em 0 -1.3em;
+    }
+    40% {
+        box-shadow: 0 2.5em 0 0;
+    }
+}
+
+.weather-description-wrapper {
+    margin-top:50px;
+    width: 100%;
 }

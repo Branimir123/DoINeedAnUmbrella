@@ -3,13 +3,25 @@ import Geolocation from '../containers/geolocation';
 import WeatherForecast from '../containers/weather_forecast';
 
 export default class App extends Component {
-  render() {
-    return (
-      <div className="col-md-12 app-component">
-        <h1 className="big-heading">Do I need an umbrella?</h1>
-        <Geolocation />
-        <WeatherForecast />
-      </div>
-    );  
-  }
+   state = {
+        animateHeading: false
+   };
+
+   ready = () => this.setState({ animateHeading: true });
+
+   render() {
+     const headingClassNames = !this.state.animateHeading ? "big-heading" : "small-heading";
+
+     return (
+       <div className="col-md-12 app-component">
+         <div>
+             <h1 className={headingClassNames}>Do I need an umbrella?
+                 <i className="umbrella fa fa-umbrella" aria-hidden="true" />
+             </h1>
+         </div>
+         <Geolocation isReady={this.ready}/>
+         <WeatherForecast />
+       </div>
+     );
+   }
 }

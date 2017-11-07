@@ -7,13 +7,13 @@ class WeatherForecast extends Component {
             || description === 'Light rain'
             || description === 'thunderstorm'
             || description === "snow"){
-                return <p className="answer-yes">YES</p>;
+                return <p className="answer-yes">YES, YOU DO</p>;
         }
         else if(!description){
             return;
         }
         else {
-            return <p className="answer-no">NO</p>;
+            return <p className="answer-no">SEEMS LIKE NO</p>;
         }
     }
 
@@ -37,14 +37,15 @@ class WeatherForecast extends Component {
             <div>
                 {this.renderAnswer(weatherDescription)}
                 <img src={iconHref} className="weather-icon" />
-                <div>
-                    <p className="weather-description"> {weatherDescription} </p>
+                <p className="weather-description"> {weatherDescription} </p>
+                <div className="weather-description-wrapper">
                     <p className="weather-description"> Temperature is {temp}°C and it feels like {feelsLike}°C. The wind has a speed of {wind} kph.</p>
                     {grabTshirt && <p className="weather-description"> A t-shirt would be OK! </p>}
                     {grabSweather && <p className="weather-description"> You might consider taking a sweater though. It looks a little cold out there. </p>}
                     {grabJacket && <p className="weather-description"> Hey, it's chilling out there. Take your winter jacket! </p>}
+                    <p className="weather-location">We found you in {city}</p>
                 </div>
-                <p className="weather-location">We found you in {city}</p>
+
             </div>
         );
     }

@@ -21,12 +21,16 @@ class Geolocation extends Component {
             return <div className="text text-danger"> Your browser does not support geolocation. </div>
         }
         else if(!this.props.isGeolocationEnabled){
-            return <div className="text text-danger"> Your geolocation isn't enabled. Please enable it. </div>
+            return <div className="message-loading"> Your geolocation isn't enabled. Please enable it. </div>
         }
         else if(!this.props.coords){
-            return <div className="message-loading">Fetching your location... </div>
+            return <div className="message-loading">
+                <div className="loader">Loading...</div>
+                Hang tight. We are trying to find where you are...
+            </div>
         }
         else {
+            this.props.isReady();
             return <div></div>
         }
     }
