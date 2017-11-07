@@ -5,11 +5,13 @@
   "main": "index.js",
   "repository": "git@github.com:Branimir123/DoINeedAnUmbrella.git",
   "scripts": {
+    "build": "webpack",
+    "build:watch": "webpack -w",
+    "start": "node server.js",
     "dev": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js",
-    "test": "mocha --compilers js:babel-core/register --require ./test/test_helper.js --recursive ./test",
-    "test:watch": "npm run test -- --watch",
-    "postinstall": "webpack -p",
-    "start": "node server.js"
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "postinstall": "webpack -p"
   },
   "author": "",
   "license": "ISC",
@@ -20,9 +22,10 @@
     "babel-preset-react": "^6.1.18",
     "chai": "^3.5.0",
     "chai-jquery": "^2.0.0",
+    "enzyme": "^3.1.1",
+    "jest": "^21.2.1",
     "jquery": "^2.2.1",
     "jsdom": "^8.1.0",
-    "mocha": "^2.4.5",
     "react-addons-test-utils": "^0.14.7",
     "webpack": "^1.12.9",
     "webpack-dev-server": "^1.14.0"
