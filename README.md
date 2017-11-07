@@ -8,4 +8,7 @@ A simple app that tells you do you actually need an umbrella based on your locat
 [Visit heroku deploy](https://doineedanumbrella.herokuapp.com/)
 ![screenshot](screenshot/screen.png)
 
-It uses the react-geolocated to fetch usesr's location and the **Apixu: Weather API** to fetch the weather forecast.
+## Super simple stuff
+Do I Need an Umbrella is a react application. It uses the react-geolocated HOC to fetch usesr's location and the **Apixu: Weather API** to fetch the weather forecast. 
+
+
