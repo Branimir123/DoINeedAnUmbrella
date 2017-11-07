@@ -196,3 +196,8 @@ body {
     margin-top:50px;
     width: 100%;
 }
+
+.weather-location {
+    transform: scale(0.7);
+    margin-top: 35px;
+}
