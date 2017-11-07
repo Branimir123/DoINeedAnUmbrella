@@ -3,7 +3,6 @@ import { FETCH_WEATHER, FETCH_WEATHER_ERROR } from '../actions/types';
 export default function(state = {}, action){
     switch(action.type){
         case FETCH_WEATHER:
-            console.log(action.payload.data);
             return  { 
                 description: action.payload.data.current.condition.text,
                 icon: action.payload.data.current.condition.icon,
