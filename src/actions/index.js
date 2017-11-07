@@ -1,7 +1,8 @@
 import axios from 'axios';
 import { FETCH_WEATHER, FETCH_WEATHER_ERROR } from './types';
+import config from  '../../config.js';
 
-const API_KEY  = process.env.API_KEY;
+const API_KEY  = process.env.API_KEY || config.API_KEY;
 const ROOT_URL = `https://api.apixu.com/v1/current.json?key=${API_KEY}`;
 
 export default function fetchWeather(coordinates) {
